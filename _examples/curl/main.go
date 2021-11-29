@@ -24,7 +24,7 @@ var (
 	getFileFile = getFile.Arg("file", "File to retrieve.").Required().ExistingFile()
 
 	post           = kingpin.Command("post", "POST a resource.")
-	postData       = post.Flag("data", "Key-value data to POST").Short('d').PlaceHolder("KEY:VALUE").StringMap()
+	postData       = post.Flag("data", "Key-value data to POST").Short('d').PlaceHolder("KEY=VALUE").StringMap()
 	postBinaryFile = post.Flag("data-binary", "File with binary data to POST.").File()
 	postURL        = post.Arg("url", "URL to POST to.").Required().URL()
 )
